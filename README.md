@@ -255,6 +255,4 @@ These improvements would make the project substantially closer to a rigorous app
 ## Author
 
 **Chamir Ngandjia**  
-Mathematics / Algebraic Geometry / Representation Theory → Machine Learning & Computer Vision
-
-This project is intended as part of a portfolio demonstrating the ability to combine a strong mathematical background with practical deep-learning implementation.
+Mathematics / Machine Learning & Computer Vision
