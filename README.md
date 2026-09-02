@@ -144,7 +144,7 @@ The following are the **recorded results in the supplied notebook**. Because the
 | Baseline | CNN only | ~62.3% final test accuracy |
 | Data augmentation | Appearance + geometric augmentation | ~82.0% final test accuracy |
 | Batch normalization | `BatchNorm2d` after convolution blocks | ~85.0% best test accuracy |
-| Batch normalization + L1 | \(\lambda=10^{-4}\) | ~87.06% best test accuracy |
+| Batch normalization + L1 | \(\lambda=10^{-4}\) | ~87.6% best test accuracy |
 
 
 The notebook measures **accuracy** :
