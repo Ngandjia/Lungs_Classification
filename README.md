@@ -27,7 +27,7 @@ The notebook follows an experimental progression:
    - visualize representative chest X-rays.
 
 2. **Preprocessing and data loading**
-   - resize images to \(224\times224\);
+   - resize images to 224 x 224;
    - convert images to tensors;
    - normalize image channels;
    - construct mini-batches using `DataLoader`.
@@ -64,7 +64,7 @@ f_\theta:
 \mathbb R^{3\times224\times224}\rightarrow\mathbb R^2.
 \]
 
-Each convolutional layer is a local linear operator followed by a nonlinear activation. For a convolution with \(C_{\rm in}\) input channels, \(C_{\rm out}\) output channels and kernel size \(K\times K\), the number of weights (with no bias) is
+Each convolutional layer is a local linear operator followed by a nonlinear activation. For a convolution with \(C_{\rm in}\) input channels, \(C_{\rm out}\) output channels and kernel size K x K, the number of weights (with no bias) is
 
 \[
 C_{\rm out}C_{\rm in}K^2.
@@ -108,7 +108,7 @@ The baseline CNN takes an RGB tensor
 (3,224,224)
 \]
 
-and progressively transforms it through convolution, ReLU, max pooling, \(1\times1\) channel-mixing convolutions, average pooling, and a final \(4\times4\) convolution.
+and progressively transforms it through convolution, ReLU, max pooling, 1 x 1 channel-mixing convolutions, average pooling, and a final 4 x 4 convolution.
 
 The spatial progression for one image is:
 
@@ -142,22 +142,15 @@ The following are the **recorded results in the supplied notebook**. Because the
 | Experiment | Main modification | Recorded result |
 |---|---|---:|
 | Baseline | CNN only | ~62.3% final test accuracy |
-| Data augmentation | Appearance + geometric augmentation | ~62.3% final test accuracy |
-| Batch normalization | `BatchNorm2d` after convolution blocks | ~89.1% best test accuracy |
-| Batch normalization + L1 | \(\lambda=10^{-4}\) | **90.42% best test accuracy** |
+| Data augmentation | Appearance + geometric augmentation | ~82.0% final test accuracy |
+| Batch normalization | `BatchNorm2d` after convolution blocks | ~85.0% best test accuracy |
+| Batch normalization + L1 | \(\lambda=10^{-4}\) | **87.06% best test accuracy** |
 
-The strongest recorded result occurs around epoch 10 in the fourth experiment.
 
-An important terminology point: the notebook measures **accuracy**, not precision. Accuracy is
+The notebook measures **accuracy** :
 
 \[
 \frac{TP+TN}{TP+TN+FP+FN},
-\]
-
-whereas precision is
-
-\[
-\frac{TP}{TP+FP}.
 \]
 
 ## Dataset
@@ -173,9 +166,7 @@ The supplied notebook reports:
 
 The classes are therefore imbalanced. Consequently, accuracy should not be considered sufficient for evaluating a medical-imaging model.
 
-## Why this project is relevant for a mathematical / ML profile
-
-The project demonstrates an ability to move between mathematical abstraction and implementation:
+The project demonstrates an ability to move between mathematical abstraction and implementation :
 
 - **Linear algebra:** convolutional operators and channel transformations;
 - **Multivariable calculus:** gradients and backpropagation;
@@ -224,7 +215,7 @@ Update the `data_path` variable in the notebook to point to the dataset location
 ### 4. Launch the notebook
 
 ```bash
-jupyter notebook Classification_lungs_recruiter_ready.ipynb
+jupyter notebook Classification_lungs.ipynb
 ```
 
 or open the notebook with JupyterLab / VS Code.
